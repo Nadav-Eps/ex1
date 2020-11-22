@@ -176,19 +176,6 @@ WGraph_DSTest {
 
     private static Random _rnd = null;
 
-    public static weighted_graph graph_creator(int v_size, int e_size, int seed) {
-        weighted_graph g = new WGraph_DS();
-        _rnd = new Random(seed);
-        for(int i=0;i<v_size;i++) {
-            g.addNode(i);
-        }
-        while(g.edgeSize() < e_size) {
-            int a = _rnd.nextInt(v_size);
-            int b = _rnd.nextInt(v_size);
-            double w = _rnd.nextDouble();
-            g.connect(a,b, w);
-        }
-        return g;
-    }
+
 
 }
